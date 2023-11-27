@@ -1,0 +1,43 @@
+/* Enter your custom styles here */
+
+
+.preenchimentoBox{
+    display: flex;
+    background-color:black;
+    border-radius:5px;  
+    margin-top:20px;
+}
+
+.grid1{
+    background-color:#292929;
+}
+
+.corTextoBox{
+    font-size:17px;
+    color:white;
+    
+}
+.imgs_cap{
+   /*display: flex;*/
+    width:100%;
+    
+    
+    border-radius:5px;
+}
+.bottonText{
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+.marginLogo{
+    position:relative;
+    top:-82px;
+    left:10px
+ 
+}
+#viewPortContainer .sapUshellShellHeadSearchContainer .sapUshellShellHeader .sapMPageHeader .sapMIBar .sapMBarPH
+.sapMPageWithSubHeader .sapMPageSubHeader:not(.sapMIBar-CTX) .sapMIBar-CTX{
+    background-color:#555;
+}
+.sapUshellAppTitleText{
+color:#fff;
+}

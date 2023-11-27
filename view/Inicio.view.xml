@@ -1,0 +1,38 @@
+<mvc:View xmlns:f="sap.f" controllerName="projetonetflix.controller.Inicio"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:layout='sap.ui.layout'
+    xmlns="sap.m">
+    
+    <Page id="page" title="Netflix com SAPUI5">
+        
+        <subHeader>
+            <Toolbar  id="_Toolbar1">
+                <Link id="_Inicio"        text='{ModeloMenu>/primeiro}'        press='onPressLinkInicio'/>
+                <Link id="_Series"        text='{ModeloMenu>/segundo}'        press='onPressLinkSeries' />
+                <Link id="_Filmes"        text="Filmes"        press='onPressLinkFilmes'/>
+                <Link id="_Documentarios" text="Documentários" press='onPressLinkDocumentarios'/>
+                <ToolbarSpacer id='tollbarspacer' />
+                <SearchField width = '30%' search = 'onPressSearch' id= 'inputSearch' ></SearchField>
+            </Toolbar>
+
+        </subHeader>
+        <content>
+           <layout:Grid content ='{APIFilmes>/titles}' class='grid1' >
+           
+                <VBox class="preenchimentoBox"  width='300px' height='460px' >
+                    <Image class='imgs_cap'  src='{APIFilmes>jawSummary/backgroundImage/url}' />
+                    <Image src='{APIFilmes>jawSummary/logoImage/url}' width='60%' height='90%' class='marginLogo'/>
+                    <Text  class = 'corTextoBox bottonText marginLogo' text='{APIFilmes>jawSummary/numSeasonsLabel}'/>
+                    <Text  class = 'corTextoBox bottonText marginLogo' text='{APIFilmes>jawSummary/title}'/>
+                    <Text  class = 'corTextoBox bottonText marginLogo' text='{APIFilmes>jawSummary/synopsis}'/>
+                    <Text  class = 'corTextoBox bottonText marginLogo' text='{APIFilmes>jawSummary/genres/1/name}'/>
+                    <Text  class = 'corTextoBox bottonText marginLogo' text='{APIFilmes>jawSummary/genres/2/name}'/>
+                </VBox>
+               
+               
+                
+
+           </layout:Grid>
+        </content>
+    </Page>
+</mvc:View>
